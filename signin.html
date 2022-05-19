@@ -31,7 +31,7 @@
 		<div class="container">
 			<div class="navbar-header">
 				<!-- Button for smallest screens -->
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+				<button title="Sing-in" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
 				<a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="Progressus HTML5 template"></a>
 			</div>
 			<div class="navbar-collapse collapse">
@@ -69,14 +69,15 @@
 							<h3 class="thin text-center">Inicia con tu cuenta</h3>
 						<hr>
 							
-							<form>
+							<form id="myForm">
 								<div class="top-margin">
-									<label>Correo electronico<span class="text-danger">*</span></label>
-									<input type="text" class="form-control">
+									<label for="correo">Correo electronico<span class="text-danger">*</span></label>
+									<input type="text" class="form-control" id="correo" title="correo" required>
 								</div>
 								<div class="top-margin">
-									<label>Contraseña <span class="text-danger">*</span></label>
-									<input type="password" class="form-control">
+									<label for="contrasena">Contraseña <span class="text-danger">*</span></label>
+									<input type="password" class="form-control" id="contrasena" title="contrasena" required>
+									<label class="top-margin" id="incorrecto">Correo o Contraseña incorrectos</label>
 								</div>
 
 								<hr>
@@ -121,10 +122,10 @@
 						<h3 class="widget-title">Siguenos</h3>
 						<div class="widget-body">
 							<p class="follow-me-icons">
-								<a href=""><i class="fa fa-twitter fa-2"></i></a>
-								<a href=""><i class="fa fa-dribbble fa-2"></i></a>
-								<a href=""><i class="fa fa-github fa-2"></i></a>
-								<a href=""><i class="fa fa-facebook fa-2"></i></a>
+								<a href="" title="twitter"><i class="fa fa-twitter fa-2"></i></a>
+								<a href="" title="random"><i class="fa fa-dribbble fa-2"></i></a>
+								<a href="" title="github"><i class="fa fa-github fa-2"></i></a>
+								<a href="" title="facebook"><i class="fa fa-facebook fa-2"></i></a>
 							</p>	
 						</div>
 					</div>
@@ -149,5 +150,6 @@
 	<script src="assets/js/headroom.min.js"></script>
 	<script src="assets/js/jQuery.headroom.min.js"></script>
 	<script src="assets/js/template.js"></script>
+	<script src="assets/js/login.js"></script>
 </body>
 </html>
