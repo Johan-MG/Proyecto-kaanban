@@ -17,6 +17,7 @@
 	<!-- Custom styles for our template -->
 	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" >
 	<link rel="stylesheet" href="assets/css/main.css">
+	<script src="assets/js/jQueryEX2.js"></script>
 
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
@@ -25,7 +26,7 @@
 	<![endif]-->
 </head>
 
-<body>
+<body onload="javascript:cargardatos();">
 	<!-- Fixed navbar -->
 	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
 		<div class="container">
@@ -74,15 +75,15 @@
 					<div class="panel panel-default exc">
 						<div class="panel-body">
 							<h3 class="thin text-center">Escribe la traducción correcta</h3>
-							<h2 class="thin text-center">PALABRA 2</h2>
+							<h2 class="thin text-center" id="pal"></h2>
 						<hr>
 							
 							<form>
 								<div class="top-margin">
-									<input type="text" class="form-control">
+									<input type="text" class="form-control" id="trad">
 								</div>
 								<div class="opcb">
-									<button class="btn2 btn-action" type="submit">Calificar</button>
+									<button class="btn2 btn-action" type="submit" onclick="javascript:val();">Calificar</button>
 								</div>
 							</form>
 						</div>

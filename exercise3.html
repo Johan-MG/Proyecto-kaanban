@@ -17,6 +17,7 @@
 	<!-- Custom styles for our template -->
 	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" >
 	<link rel="stylesheet" href="assets/css/main.css">
+	<script src="assets/js/jQueryEX3.js"></script>
 
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
@@ -25,7 +26,7 @@
 	<![endif]-->
 </head>
 
-<body>
+<body onload="javascript:cargardatos();">
 	<!-- Fixed navbar -->
 	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
 		<div class="container">
@@ -74,21 +75,21 @@
 					<div class="panel panel-default exc">
 						<div class="panel-body">
 							<h3 class="thin text-center">Selecciona la traducción correcta de la siguiente expresión</h3>
-							<h2 class="thin text-center">Expresión</h2>
+							<h2 class="thin text-center" id="pal"></h2>
 						<hr>
 							
 							<form>
 								<div class="opcb">
-									<button class="btn2 btn-action" type="submit">Opcion 1</button>
+									<button class="btn2 btn-action" type="submit" onclick="javascript:val(1);" id="id1"></button>
 								</div>
 								<div class="opcb">
-									<button class="btn2 btn-action" type="submit">Opcion 2</button>
+									<button class="btn2 btn-action" type="submit" onclick="javascript:val(2);" id="id2"></button>
 								</div>
 								<div class="opcb">
-									<button class="btn2 btn-action" type="submit">Opcion 3</button>
+									<button class="btn2 btn-action" type="submit" onclick="javascript:val(3);" id="id3"></button>
 								</div>
 								<div class="opcb">
-									<button class="btn2 btn-action" type="submit">Opcion 4</button>
+									<button class="btn2 btn-action" type="submit" onclick="javascript:val(4);" id="id4"></button>
 								</div>
 							</form>
 						</div>
