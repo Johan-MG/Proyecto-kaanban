@@ -13,6 +13,7 @@
 	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<script src="assets/js/jQueryEX1.js"></script>
 
 	<!-- Custom styles for our template -->
 	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" >
@@ -25,7 +26,7 @@
 	<![endif]-->
 </head>
 
-<body>
+<body  onload="javascript:cargardatos();">
 	<!-- Fixed navbar -->
 	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
 		<div class="container">
@@ -74,26 +75,25 @@
 					<div class="panel panel-default exc">
 						<div class="panel-body">
 							<h3 class="thin text-center">Selecciona la traducción correcta</h3>
-							<h2 id="pal">P</h2>
+							<h2 class="thin text-center" id="pal"></h2>
 						<hr>
 							
 							<form>
 								<div class="opcb">
-									<button class="btn2 btn-action" type="submit" onclick="javascript:callWebService();">Opcion 1</button>
+									<button class="btn2 btn-action" type="submit" onclick="javascript:val(1);" id="id1"></button>
 								</div>
 								<div class="opcb">
-									<button class="btn2 btn-action" type="submit">Opcion 2</button>
+									<button class="btn2 btn-action" type="submit" onclick="javascript:val(2);" id="id2"></button>
 								</div>
 								<div class="opcb">
-									<button class="btn2 btn-action" type="submit">Opcion 3</button>
+									<button class="btn2 btn-action" type="submit" onclick="javascript:val(3);"id="id3"></button>
 								</div>
 								<div class="opcb">
-									<button class="btn2 btn-action" type="submit">Opcion 4</button>
+									<button class="btn2 btn-action" type="submit" onclick="javascript:val(4);" id="id4"></button>
 								</div>
 							</form>
 						</div>
 					</div>
-
 				</div>
 				
 			</article>
@@ -150,6 +150,5 @@
 	<script src="assets/js/headroom.min.js"></script>
 	<script src="assets/js/jQuery.headroom.min.js"></script>
 	<script src="assets/js/template.js"></script>
-	<script src="assets/js/jQueryEX1.js"></script>
 </body>
 </html>
