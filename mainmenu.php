@@ -1,5 +1,16 @@
+<?php
+    session_start();
+    $varUsuario = $_SESSION['Usuario'];
+    $varRol = $_SESSION['Rol'];
+    if($varUsuario == null || $varUsuario == '' &&
+    $varRol == null || $varRol == ''){
+        echo 'No se ha loggeado'.$_SESSION['Usuario'].$_SESSION['Rol'];
+        die();
+    }
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
@@ -30,7 +41,7 @@
 		<div class="container">
 			<div class="navbar-header">
 				<!-- Button for smallest screens -->
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+				<button title="nav" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
 				<a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="Progressus HTML5 template"></a>
 			</div>
 			<div class="navbar-collapse collapse">
@@ -38,7 +49,7 @@
 					<li><a href="index.html">Inicio</a></li>
 					<li class="active"><a href="mainmenu.html">Aprende vocabulario</a></li>
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Nombre de usuario<b class="caret"></b></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $varUsuario ?><b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li><a href="sidebar-left.html">Estadisticas</a></li>
 							<li><a href="sidebar-right.html">Cerrar Sesión</a></li>
@@ -51,25 +62,56 @@
 	<!-- /.navbar -->
 
 	<!-- Header -->
-	<header id="head">
+	<main id="head">
 		<div class="container">
-				<h1 class="lead">ELIGE UN TEMA</h1>
+			<h1 class="lead">Selección Múltiple</h1>
 			<div class="wrapper2">
-				<button class="btnes fourth">tema 1</button>
-				<button class="btnes fourth">TEMA 2</button>
-				<button class="btnes fourth">TEMA 3</button>
-				<button class="btnes fourth">TEMA 4</button>
-				<button class="btnes fourth">TEMA 5</button>
-				<button class="btnes fourth">TEMA 6</button>
+				<button class="btnes fourth">Computación</button>
+				<button class="btnes fourth">Botánica</button>
+				<button class="btnes fourth">Astrología</button>
+				<button class="btnes fourth">Escuela</button>
+				<button class="btnes fourth">Hogar</button>
+				<button class="btnes fourth">Clima</button>
 			</div>
-				<h2 class="lead">FAVORITOS</h2>
+				<!-- <h2 class="lead">FAVORITOS</h2>
 				<div class="wrapper2">
 					<button class="btnes fourth">tema 1</button>
 					<button class="btnes fourth">TEMA 2</button>
 					<button class="btnes fourth">TEMA 3</button>
-				</div>
+				</div> -->
 		</div>
-	</header>
+		<div class="container">
+			<h1 class="lead">Traducción</h1>
+			<div class="wrapper2">
+				<button class="btnes fourth">Computación</button>
+				<button class="btnes fourth">Botánica</button>
+				<button class="btnes fourth">Astrología</button>
+				<button class="btnes fourth">Escuela</button>
+				<button class="btnes fourth">Hogar</button>
+				<button class="btnes fourth">Clima</button>
+			</div>
+				<!-- <h2 class="lead">FAVORITOS</h2>
+				<div class="wrapper2">
+					<button class="btnes fourth">tema 1</button>
+					<button class="btnes fourth">TEMA 2</button>
+					<button class="btnes fourth">TEMA 3</button>
+				</div> -->
+		</div>
+		<div class="container">
+			<h1 class="lead">Expresiones</h1>
+			<div class="wrapper2">
+				<div></div>
+				<button class="btnes fourth">¡Jugar!</button>
+				
+			</div>
+				<!-- <h2 class="lead">FAVORITOS</h2>
+				<div class="wrapper2">
+					<button class="btnes fourth">tema 1</button>
+					<button class="btnes fourth">TEMA 2</button>
+					<button class="btnes fourth">TEMA 3</button>
+				</div> -->
+		</div>
+	</main>
 	<!-- /Header -->
 
 	<!-- /Highlights -->
@@ -93,10 +135,10 @@
 						<h3 class="widget-title">Siguenos</h3>
 						<div class="widget-body">
 							<p class="follow-me-icons">
-								<a href=""><i class="fa fa-twitter fa-2"></i></a>
-								<a href=""><i class="fa fa-dribbble fa-2"></i></a>
-								<a href=""><i class="fa fa-github fa-2"></i></a>
-								<a href=""><i class="fa fa-facebook fa-2"></i></a>
+								<a href="" title="twitter"><i class="fa fa-twitter fa-2"></i></a>
+								<a href="" title="nose"><i class="fa fa-dribbble fa-2"></i></a>
+								<a href="" title="github"><i class="fa fa-github fa-2"></i></a>
+								<a href="" title="facebook"><i class="fa fa-facebook fa-2"></i></a>
 							</p>	
 						</div>
 					</div>

@@ -37,7 +37,7 @@
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
 					<li><a href="index.html">Inicio</a></li>
-					<li><a href="about.html">Sobre nosotros</a></li>
+					<li><a href="contact.html">Sobre nosotros</a></li>
 					<li class="active"><a class="btn" href="signin.html">SIGN IN / SIGN UP</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
@@ -69,10 +69,12 @@
 							<h3 class="thin text-center">Inicia con tu cuenta</h3>
 						<hr>
 							
-							<form id="myForm">
+							<form id="myForm" action="assets/php/login.php" method="POST">
 								<div class="top-margin">
 									<label for="correo">Correo electronico<span class="text-danger">*</span></label>
 									<input type="text" class="form-control" id="correo" title="correo" required>
+									<input type="text" name="Usuario" value="Sin modificar" id="Usuario" hidden>
+									<input type="text" name="Rol" value="Sin modificar" id="Rol" hidden>
 								</div>
 								<div class="top-margin">
 									<label for="contrasena">Contraseña <span class="text-danger">*</span></label>
@@ -87,7 +89,8 @@
 										<b><a href="signup.html">¿No tienes cuenta?</a></b>
 									</div>
 									<div class="col-lg-4 text-right">
-										<button class="btn btn-action" type="submit">Iniciar</button>
+										<button class="btn btn-action" type="submit" id="submit" style="visibility:hidden">Iniciar</button>
+										<button class="btn btn-action" id="send">Iniciar</button>
 									</div>
 								</div>
 							</form>
