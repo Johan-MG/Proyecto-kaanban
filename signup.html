@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
@@ -68,34 +68,34 @@
 							<h3 class="thin text-center">Crea una cuenta nueva</h3>
 							<hr>
 
-							<form>
+							<form id="myForm">
 								<div class="top-margin">
-									<label>Nombre</label>
-									<input type="text" class="form-control">
+									<label for="nombre">Nombre <span class="text-danger">*</span> </label>
+									<input type="text" class="form-control" id="nombre" title="correo" required>
 								</div>
 								<div class="row top-margin">
 									<div class="col-sm-6">
-										<label>Apellido Paterno <span class="text-danger">*</span></label>
-										<input type="text" class="form-control">
+										<label for="paterno">Apellido Paterno <span class="text-danger">*</span></label>
+										<input type="text" class="form-control" id="paterno" title="paterno" required>
 									</div>
 									<div class="col-sm-6">
-										<label>Apellido Materno <span class="text-danger">*</span></label>
-										<input type="text" class="form-control">
+										<label for="materno">Apellido Materno <span class="text-danger">*</span></label>
+										<input type="text" class="form-control" id="materno" title="materno" required>
 									</div>
 								</div>
 								<div class="top-margin">
-									<label>Correo Electronico <span class="text-danger">*</span></label>
-									<input type="text" class="form-control">
+									<label for="correo">Correo Electronico <span class="text-danger">*</span></label>
+									<input type="email" class="form-control" id="correo" title="correo" required>
 								</div>
 
 								<div class="row top-margin">
 									<div class="col-sm-6">
-										<label>Contraseña <span class="text-danger">*</span></label>
-										<input type="text" class="form-control">
+										<label for="contrasena">Contraseña <span class="text-danger">*</span></label>
+										<input type="password" class="form-control" id="contrasena" title="contrasena" required>
 									</div>
 									<div class="col-sm-6">
-										<label>Confirmar contraseña <span class="text-danger">*</span></label>
-										<input type="text" class="form-control">
+										<label for="contrasena-b">Confirmar contraseña <span class="text-danger">*</span></label>
+										<input type="password" class="form-control" id="contrasena-b" title="contrasena-b" required>
 									</div>
 								</div>
 								<hr>
@@ -165,5 +165,6 @@
 	<script src="assets/js/headroom.min.js"></script>
 	<script src="assets/js/jQuery.headroom.min.js"></script>
 	<script src="assets/js/template.js"></script>
+	<script src="assets/js/signup.js"></script>
 </body>
 </html>
