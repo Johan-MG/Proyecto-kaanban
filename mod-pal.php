@@ -6,14 +6,13 @@
 	<meta name="description" content="">
 	<meta name="author"      content="Sergey Pozhilov (GetTemplate.com)">
 	
-	<title>Kaanbal - Ejercicios</title>
+	<title>Kaanbal - Administrador</title>
 
 	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
 	
 	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
-	<script src="assets/js/jQueryEX1.js"></script>
 
 	<!-- Custom styles for our template -->
 	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" >
@@ -26,7 +25,7 @@
 	<![endif]-->
 </head>
 
-<body  onload="javascript:cargardatos();">
+<body>
 	<!-- Fixed navbar -->
 	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
 		<div class="container">
@@ -38,12 +37,13 @@
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
 					<li><a href="index.html">Inicio</a></li>
-					<li><a href="mainmenu.html">Aprende vocabulario</a></li>
+					<li><a href="mainmenu.html">Aprende Vocabulario</a></li>
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Nombre de usuario<b class="caret"></b></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Nombre de admin<b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href="sidebar-left.html">Estadisticas</a></li>
-							<li><a href="sidebar-right.html">Cerrar Sesión</a></li>
+							<li><a href="mod-usu.html">Administrar usuario</a></li>
+							<li><a href="mod-pal.html">Administrar palabras</a></li>
+							<li><a href="assets/php/logout.php">Cerrar Sesión</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -59,8 +59,7 @@
 
 		<ol class="breadcrumb">
 			<li><a href="index.html">Inicio</a></li>
-			<li><a href="mainmenu.html">Aprende vocabulario</a></li>
-			<li class="active">Tema X</li>
+			<li class="active">Administrar Palabras</li>
 		</ol>
 
 		<div class="row">
@@ -68,37 +67,57 @@
 			<!-- Article main content -->
 			<article class="col-xs-12 maincontent">
 				<header class="page-header">
-					<h1 class="page-title">Ejercicio de Vocabulario</h1>
+					<h1 class="page-title">Administración de palabras</h1>
 				</header>
 				
 				<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-					<div class="panel panel-default exc">
+					<div class="panel panel-default">
 						<div class="panel-body">
-							<h3 class="thin text-center">Selecciona la traducción correcta</h3>
-							<h2 class="thin text-center" id="pal"></h2>
-						<hr>
-							
+							<h3 class="thin text-center">Ingrese los datos correspondientes</h3>
+							<hr>
 							<form>
-								<div class="opcb">
-									<button class="btn2 btn-action" type="submit" onclick="javascript:val(1);" id="id1"></button>
+                                <div class="top-margin">
+									<label>ID</label>
+									<input type="text" class="form-control">
 								</div>
-								<div class="opcb">
-									<button class="btn2 btn-action" type="submit" onclick="javascript:val(2);" id="id2"></button>
+								<div class="top-margin">
+									<label>Palabra</label>
+									<input type="text" class="form-control">
 								</div>
-								<div class="opcb">
-									<button class="btn2 btn-action" type="submit" onclick="javascript:val(3);"id="id3"></button>
+                                <div class="top-margin">
+									<label>Traducción</label>
+									<input type="text" class="form-control">
 								</div>
-								<div class="opcb">
-									<button class="btn2 btn-action" type="submit" onclick="javascript:val(4);" id="id4"></button>
+                                <div class="top-margin">
+									<label>Idioma</label>
+									<input type="text" class="form-control">
+								</div>
+								<div class="top-margin">
+									<label>Tema <span class="text-danger">*</span></label>
+									<input type="text" class="form-control">
+								</div>
+								<div class="top-margin">
+									<label>Rareza <span class="text-danger">*</span></label>
+									<input type="text" class="form-control">
+								</div>
+								<hr>
+								<div class="row">
+									<div class="col-lg-4 text-right">
+										<button class="btn btn-action" type="submit">Eliminar</button>	
+									</div>
+									<div class="col-lg-4 text-right">
+										<button class="btn btn-action" type="submit">Modificar</button>	
+									</div>
+									<div class="col-lg-4 text-right">
+										<button class="btn btn-action" type="submit">Registrar</button>	
+									</div>
 								</div>
 							</form>
 						</div>
 					</div>
 				</div>
-				
 			</article>
 			<!-- /Article -->
-
 		</div>
 	</div>	<!-- /container -->
 	
@@ -143,6 +162,7 @@
 		</div>
 
 	</footer>	
+		
 
 	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

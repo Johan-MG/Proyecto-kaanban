@@ -1,3 +1,14 @@
+<?php
+    session_start();
+    $varUsuario = $_SESSION['Usuario'];
+    $varRol = $_SESSION['Rol'];
+    if($varUsuario == null || $varUsuario == '' &&
+    $varRol == null || $varRol == ''){
+        echo 'No se ha loggeado'.$_SESSION['Usuario'].$_SESSION['Rol'];
+        die();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,11 +24,11 @@
 	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<script src="assets/js/jQueryEX1.js"></script>
 
 	<!-- Custom styles for our template -->
 	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" >
 	<link rel="stylesheet" href="assets/css/main.css">
-	<script src="assets/js/jQueryEX2.js"></script>
 
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
@@ -26,7 +37,7 @@
 	<![endif]-->
 </head>
 
-<body onload="javascript:cargardatos();">
+<body  onload="javascript:cargardatos();">
 	<!-- Fixed navbar -->
 	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
 		<div class="container">
@@ -40,10 +51,10 @@
 					<li><a href="index.html">Inicio</a></li>
 					<li><a href="mainmenu.html">Aprende vocabulario</a></li>
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Nombre de usuario<b class="caret"></b></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $varUsuario ?><b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li><a href="sidebar-left.html">Estadisticas</a></li>
-							<li><a href="sidebar-right.html">Cerrar Sesión</a></li>
+							<li><a href="assets/php/logout.php">Cerrar Sesión</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -74,21 +85,26 @@
 				<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
 					<div class="panel panel-default exc">
 						<div class="panel-body">
-							<h3 class="thin text-center">Escribe la traducción correcta</h3>
+							<h3 class="thin text-center">Selecciona la traducción correcta</h3>
 							<h2 class="thin text-center" id="pal"></h2>
 						<hr>
 							
 							<form>
-								<div class="top-margin">
-									<input type="text" class="form-control" id="trad">
+								<div class="opcb">
+									<button class="btn2 btn-action" type="submit" onclick="javascript:val(1);" id="id1"></button>
 								</div>
 								<div class="opcb">
-									<button class="btn2 btn-action" type="submit" onclick="javascript:val();">Calificar</button>
+									<button class="btn2 btn-action" type="submit" onclick="javascript:val(2);" id="id2"></button>
+								</div>
+								<div class="opcb">
+									<button class="btn2 btn-action" type="submit" onclick="javascript:val(3);"id="id3"></button>
+								</div>
+								<div class="opcb">
+									<button class="btn2 btn-action" type="submit" onclick="javascript:val(4);" id="id4"></button>
 								</div>
 							</form>
 						</div>
 					</div>
-
 				</div>
 				
 			</article>

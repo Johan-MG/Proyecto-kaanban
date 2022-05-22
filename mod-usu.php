@@ -43,7 +43,7 @@
 						<ul class="dropdown-menu">
 							<li><a href="mod-usu.html">Administrar usuario</a></li>
 							<li><a href="mod-pal.html">Administrar palabras</a></li>
-							<li><a href="signin.html">Cerrar Sesión</a></li>
+							<li><a href="assets/php/logout.php">Cerrar Sesión</a></li>
 						</ul>
 					</li>
 				</ul>
