@@ -1,5 +1,19 @@
+<?php
+    session_start();
+    $varUsuario = $_SESSION['Usuario'];
+    $varRol = $_SESSION['Rol'];
+    if($varUsuario == null || $varUsuario == '' &&
+    $varRol == null || $varRol == ''){
+        echo 'No se ha loggeado'.$_SESSION['Usuario'].$_SESSION['Rol'];
+        die();
+    }elseif($varRol == 'ADMINISTRADOR'){
+		echo 'No cuenta con permisos de ver está página';
+		die();
+	}
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
@@ -41,8 +55,8 @@
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Nombre de admin<b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href="mod-usu.html">Administrar usuario</a></li>
-							<li><a href="mod-pal.html">Administrar palabras</a></li>
+							<li><a href="mod-usu.php">Administrar usuario</a></li>
+							<li><a href="mod-pal.php">Administrar palabras</a></li>
 							<li><a href="assets/php/logout.php">Cerrar Sesión</a></li>
 						</ul>
 					</li>
