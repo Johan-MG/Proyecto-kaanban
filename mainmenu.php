@@ -52,7 +52,7 @@
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $varUsuario ?><b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li><a href="sidebar-left.html">Estadisticas</a></li>
-							<li><a href="sidebar-right.html">Cerrar Sesión</a></li>
+							<li><a href="assets/php/logout.php">Cerrar Sesión</a></li>
 						</ul>
 					</li>
 				</ul>
