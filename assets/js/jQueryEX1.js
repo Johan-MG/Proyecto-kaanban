@@ -1,3 +1,4 @@
+alert(document.getElementById('siuu').value);
 var tema = document.getElementById('tema');
 //4 números aleatorios sin repeticion
 numero1 =aleatorio();

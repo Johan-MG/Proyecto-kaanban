@@ -6,8 +6,8 @@
     $varRol == null || $varRol == ''){
         echo 'No se ha loggeado'.$_SESSION['Usuario'].$_SESSION['Rol'];
         die();
-    }elseif($varRol == 'ADMINISTRADOR'){
-		echo 'No cuenta con permisos de ver está página';
+    }elseif($varRol != 'ADMINISTRADOR'){
+		echo 'No cuenta con permisos de ver está página '.$varRol;
 		die();
 	}
 ?>

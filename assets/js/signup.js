@@ -8,7 +8,11 @@ const myForm = document.getElementById('myForm');
 const Tipo = 3;
 myForm.addEventListener("submit", (e) =>{
     e.preventDefault();
-    if (Contrasena != Contrasenab) {
+    console.log("entre");
+    console.log(document.getElementById('contrasena').value);
+    if (Contrasena.value != Contrasenab.value) {
+        console.log(document.getElementById('contrasena'));
+        console.log(Contrasenab.value);
         alert("Las contraseñas deben coincidir");
     } else {
         registro(); 
@@ -35,3 +39,5 @@ function registro(){
         console.log($(data).find('Bandera').text());
     }) 
 }
+
+console.log("sadasd");

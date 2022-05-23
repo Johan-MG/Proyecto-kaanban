@@ -71,14 +71,16 @@
 	<main id="head">
 		<div class="container">
 			<h1 class="lead">Selección Múltiple</h1>
+			<form method="POST" action="assets/php/temas_multiple.php" id="myForm">
 			<div class="wrapper2">
-				<button class="btnes fourth">Computación</button>
-				<button class="btnes fourth">Botánica</button>
-				<button class="btnes fourth">Astrología</button>
-				<button class="btnes fourth">Escuela</button>
-				<button class="btnes fourth">Hogar</button>
-				<button class="btnes fourth">Clima</button>
+					<button class="btnes fourth" name="Tema" value="computacion">Computación</button>
+					<button class="btnes fourth" name="Tema" value="botánica">Botánica</button>
+					<button class="btnes fourth" name="Tema" value="astrología">Astrología</button>
+					<button class="btnes fourth" name="Tema" value="escuela">Escuela</button>
+					<button class="btnes fourth" name="Tema" value="hogar">Hogar</button>
+					<button class="btnes fourth" name="Tema" value="clima">Clima</button>
 			</div>
+			</form>
 				<!-- <h2 class="lead">FAVORITOS</h2>
 				<div class="wrapper2">
 					<button class="btnes fourth">tema 1</button>
@@ -88,14 +90,16 @@
 		</div>
 		<div class="container">
 			<h1 class="lead">Traducción</h1>
+			<form method="POST" action="assets/php/temas_traduccion.php" id="myForm">
 			<div class="wrapper2">
-				<button class="btnes fourth">Computación</button>
-				<button class="btnes fourth">Botánica</button>
-				<button class="btnes fourth">Astrología</button>
-				<button class="btnes fourth">Escuela</button>
-				<button class="btnes fourth">Hogar</button>
-				<button class="btnes fourth">Clima</button>
+					<button class="btnes fourth" name="Tema" value="computacion">Computación</button>
+					<button class="btnes fourth" name="Tema" value="botánica">Botánica</button>
+					<button class="btnes fourth" name="Tema" value="astrología">Astrología</button>
+					<button class="btnes fourth" name="Tema" value="escuela">Escuela</button>
+					<button class="btnes fourth" name="Tema" value="hogar">Hogar</button>
+					<button class="btnes fourth" name="Tema" value="clima">Clima</button>
 			</div>
+			</form>
 				<!-- <h2 class="lead">FAVORITOS</h2>
 				<div class="wrapper2">
 					<button class="btnes fourth">tema 1</button>
@@ -107,7 +111,7 @@
 			<h1 class="lead">Expresiones</h1>
 			<div class="wrapper2">
 				<div></div>
-				<button class="btnes fourth">¡Jugar!</button>
+				<a href="exercise3.php" class="btnes fourth">¡Jugar!</a>
 				
 			</div>
 				<!-- <h2 class="lead">FAVORITOS</h2>
@@ -169,5 +173,6 @@
 	<script src="assets/js/headroom.min.js"></script>
 	<script src="assets/js/jQuery.headroom.min.js"></script>
 	<script src="assets/js/template.js"></script>
+	<script src="assets/js/mainmenu.js"></script>
 </body>
 </html>
