@@ -28,7 +28,7 @@ function registro(){
         switch($(data).find('Bandera').text()) {
             case '1':
                 alert("Registro exitoso. ¡Bienvenido!");
-                window.location.href = "mainmenu.php";
+                window.location.href = "singin.html";
             break;
             case '-1':
                 alert("El correo ya existe");
@@ -39,5 +39,3 @@ function registro(){
         console.log($(data).find('Bandera').text());
     }) 
 }
-
-console.log("sadasd");
