@@ -27,7 +27,7 @@ function registro(){
     }).done((data) => {
         switch($(data).find('Bandera').text()) {
             case '1':
-                alert("Registro exitoso. ¡Bienvenido!");
+                alert("¡Registro exitoso! Por favor inicie sesión.");
                 window.location.href = "singin.html";
             break;
             case '-1':
