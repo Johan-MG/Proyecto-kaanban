@@ -28,7 +28,7 @@ function registro(){
         switch($(data).find('Bandera').text()) {
             case '1':
                 alert("Registro exitoso. ¡Bienvenido!");
-                window.location.href = "mainmenu.html";
+                window.location.href = "mainmenu.php";
             break;
             case '-1':
                 alert("El correo ya existe");
