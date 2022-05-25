@@ -1,5 +1,5 @@
 alert(document.getElementById('siuu').value);
-var tema = document.getElementById('tema');
+var tema = document.getElementById('siuu').value;
 //4 números aleatorios sin repeticion
 numero1 =aleatorio();
 numero2 =0;
@@ -38,7 +38,7 @@ function cargardatos()
     {
         $.ajax
         ({
-            url: `https://kaanbal.azurewebsites.net/Conexion.asmx/JSON?Tema=Hogar`,
+            url: `https://kaanbal.azurewebsites.net/Conexion.asmx/JSON?Tema=${tema}`,
             type: 'GET',
             dataType: 'xml',        
             success: function(msg) 
