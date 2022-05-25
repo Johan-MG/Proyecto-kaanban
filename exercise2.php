@@ -49,7 +49,7 @@
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
 					<li><a href="index.html">Inicio</a></li>
-					<li><a href="mainmenu.html">Aprende vocabulario</a></li>
+					<li><a href="mainmenu.php">Aprende vocabulario</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $varUsuario ?><b class="caret"></b></a>
 						<ul class="dropdown-menu">
@@ -76,8 +76,8 @@
 
 		<ol class="breadcrumb">
 			<li><a href="index.html">Inicio</a></li>
-			<li><a href="mainmenu.html">Aprende vocabulario</a></li>
-			<li class="active">Tema X</li>
+			<li><a href="mainmenu.php">Aprende vocabulario</a></li>
+			<li class="active"><?php echo $_SESSION['Tema'];?></li>
 		</ol>
 
 		<div class="row">
@@ -95,12 +95,12 @@
 							<h2 class="thin text-center" id="pal"></h2>
 						<hr>
 							
-							<form>
+							<form id="myForm">
 								<div class="top-margin">
 									<input type="text" class="form-control" id="trad">
 								</div>
 								<div class="opcb">
-									<button class="btn2 btn-action" type="submit" onclick="javascript:val();">Calificar</button>
+									<button class="btn2 btn-action" type="submit" id="but">Calificar</button>
 								</div>
 							</form>
 						</div>
@@ -155,7 +155,7 @@
 		</div>
 
 	</footer>	
-
+	<input type="text" id="siuu" value="<?php echo $_SESSION['Tema'];?>" hidden>
 	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>

@@ -48,7 +48,7 @@
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
 					<li><a href="index.html">Inicio</a></li>
-					<li><a href="mainmenu.html">Aprende vocabulario</a></li>
+					<li><a href="mainmenu.php">Aprende vocabulario</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $varUsuario ?><b class="caret"></b></a>
 						<ul class="dropdown-menu">
@@ -75,7 +75,7 @@
 
 		<ol class="breadcrumb">
 			<li><a href="index.html">Inicio</a></li>
-			<li><a href="mainmenu.html">Aprende vocabulario</a></li>
+			<li><a href="mainmenu.php">Aprende vocabulario</a></li>
 			<li class="active">Tema X</li>
 		</ol>
 
@@ -92,9 +92,10 @@
 						<div class="panel-body">
 							<h3 class="thin text-center">Selecciona la traducción correcta</h3>
 							<h2 class="thin text-center" id="pal"></h2>
+							<h2 class="thin text-center" id="res"></h2>
 						<hr>
 							
-							<form>
+							<form id="myForm">
 								<div class="opcb">
 									<button class="btn2 btn-action" type="submit" onclick="javascript:val(1);" id="id1"></button>
 								</div>

@@ -1,4 +1,10 @@
-var tema = document.getElementById('tema');
+var tema = document.getElementById('siuu').value;
+console.log(tema);
+myForm.addEventListener("submit", (e) =>
+{
+    e.preventDefault();
+    val();
+});
 //Colocar datos en la pagina web
 valor="";
 res="";
@@ -8,6 +14,7 @@ function formato(data)
     valor=$(data).find('Palabra').text();
     document.querySelector('#pal').append(valor);
     res=$(data).find('string:nth-child(1)').text();
+    //
 }
 //Consumir servicio web
 function cargardatos()
@@ -16,7 +23,7 @@ function cargardatos()
     {
         $.ajax
         ({
-            url: `https://kaanbal.azurewebsites.net/Conexion.asmx/JSON?Tema=Hogar`,
+            url: `https://kaanbal.azurewebsites.net/Conexion.asmx/JSON?Tema=${tema}`,
             type: 'GET',
             dataType: 'xml',        
             success: function(msg) 
@@ -51,10 +58,21 @@ function val()
         }
         i++;
     }
+    elem = document.getElementById('but');
     if(aux==false)
-    {alert("Respuesta correcta");}
+    {
+        elem.style.background = 'blue';
+        document.querySelector('#pal').append("Respuesta Correcta");
+        setTimeout(function(){
+            location.reload();
+        }, 3000);
+    }
     else
-    {alert("Respuesta incorrecta");
-    window.location.href = "exercise1.html";}
-    
+    {
+        elem.style.background = 'red';
+        document.querySelector('#pal').append("Respuesta Incorrecta");
+        setTimeout(function(){
+            location.reload();
+        }, 3000);
+    }
 }
