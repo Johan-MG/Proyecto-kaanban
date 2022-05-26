@@ -1,0 +1,105 @@
+ .card {
+    position: relative;
+    width: 250px;
+    height: 300px;
+    text-align: center;
+    z-index: 10;
+    margin: 20px 20px 60px;
+  }
+  .card .box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.295);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 10;
+    border-radius: 10px;
+  }
+  .percent{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    z-index: 100;
+  }
+  .percent .number{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .percent .number h2{
+    color: rgb(8, 6, 6);
+    font-weight: 700;
+    font-size: 50px;
+  }
+  .percent .number h2 span{
+    font-size: 24px;
+  }
+  .text{
+    position: absolute;
+    bottom: -42px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 30px 20px 10px;
+    z-index: 1;
+    background: rgb(1, 82, 82);
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    transition: bottom 0.5s, z-index 0s, transform 0.5s, padding 0.5s;
+    pointer-events: none;
+    color: rgb(255, 255, 255);
+    transition-delay: 0.5s, 0.5s, 0s, 0.5s;
+  }
+  .card:hover .text{
+    bottom: -72px;
+    z-index: 11;
+    transform: translateX(-50%) translateY(-50px);
+    padding: 10px 20px 10px ;
+    transition-delay: 0s, 0.5s, 0.5s, 0s;
+  
+  }
+  .card:nth-child(1) .text {
+    background: #7ed6a3;
+  }
+  .card:nth-child(2) .text {
+    background: #cc3636;
+  }
+ 
+  svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+  }
+ 
+ 
+  .card:nth-child(1) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440px - (440px * 15)/100);
+  }
+  .card:nth-child(2) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440px - (440px * 56)/100);
+  }
+  .card:nth-child(3) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440px - (440px * 95)/100);
+  }
+
+  .cartas{
+    display: flex;
+    flex-wrap: wrap;
+  }
