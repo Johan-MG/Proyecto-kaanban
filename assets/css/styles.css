@@ -1,4 +1,4 @@
- .card {
+.container .card {
     position: relative;
     width: 250px;
     height: 300px;
@@ -6,7 +6,7 @@
     z-index: 10;
     margin: 20px 20px 60px;
   }
-  .card .box{
+  .container .card .box{
     position: absolute;
     top: 0;
     left: 0;
@@ -76,30 +76,44 @@
   
   }
   .card:nth-child(1) .text {
-    background: #7ed6a3;
+    background: #d6b07e;
   }
   .card:nth-child(2) .text {
-    background: #cc3636;
+    background: #36cc3e;
   }
- 
+  .card:nth-child(3) .text {
+    background: #7acaf0;
+  }
   svg{
     position: relative;
     width: 150px;
     height: 150px;
   }
+  svg circle{
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke-width: 10;
+    stroke:  rgba(255, 255, 255, 0.05);
+    transform: translate(5px, 5px);
+    stroke-linecap: round;
+  }
+  svg circle:nth-child(2){
+    stroke:  rgb(33, 192, 12); 
+    stroke-dasharray: 440px;
+    stroke-dashoffset: 80px;
+  }
  
  
-  .card:nth-child(1) svg circle:nth-child(2){
-    stroke-dashoffset: calc(440px - (440px * 15)/100);
-  }
-  .card:nth-child(2) svg circle:nth-child(2){
-    stroke-dashoffset: calc(440px - (440px * 56)/100);
-  }
+  /* Selector del porcentaje de aprovechamiento */
   .card:nth-child(3) svg circle:nth-child(2){
-    stroke-dashoffset: calc(440px - (440px * 95)/100);
+    stroke-dashoffset: calc(440px - (440px * 90)/100);
   }
 
   .cartas{
+      /* Centrado de items wrap */
     display: flex;
-    flex-wrap: wrap;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  justify-content: space-between;
   }
