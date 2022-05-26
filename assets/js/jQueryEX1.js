@@ -1,4 +1,4 @@
-var tema = document.getElementById('siuu').value;
+var tema = document.getElementById('siu').value;
 myForm.addEventListener("submit", (e) =>
 {
     e.preventDefault();
