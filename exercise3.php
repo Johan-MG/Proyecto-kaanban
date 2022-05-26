@@ -76,8 +76,8 @@
 
 		<ol class="breadcrumb">
 			<li><a href="index.html">Inicio</a></li>
-			<li><a href="mainmenu.html">Aprende vocabulario</a></li>
-			<li class="active">Tema X</li>
+			<li><a href="mainmenu.php">Aprende vocabulario</a></li>
+			<li class="active">Expresiones</li>
 		</ol>
 
 		<div class="row">
@@ -93,6 +93,7 @@
 						<div class="panel-body">
 							<h3 class="thin text-center">Selecciona la traducción correcta de la siguiente expresión</h3>
 							<h2 class="thin text-center" id="pal"></h2>
+							<h2 class="thin text-center" id="res"></h2>
 						<hr>
 							
 							<form>

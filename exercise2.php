@@ -28,13 +28,14 @@
 	<!-- Custom styles for our template -->
 	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" >
 	<link rel="stylesheet" href="assets/css/main.css">
-	<script src="assets/js/jQueryEX2.js"></script>
+	
 
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
 	<script src="assets/js/html5shiv.js"></script>
 	<script src="assets/js/respond.min.js"></script>
 	<![endif]-->
+	<input type="text" id="siu" value="<?php echo $_SESSION['Tema'];?>" hidden>
 </head>
 
 <body onload="javascript:cargardatos();">
@@ -93,6 +94,7 @@
 						<div class="panel-body">
 							<h3 class="thin text-center">Escribe la traducción correcta</h3>
 							<h2 class="thin text-center" id="pal"></h2>
+							<h2 class="thin text-center" id="pala"></h2>
 						<hr>
 							
 							<form id="myForm">
@@ -100,7 +102,7 @@
 									<input type="text" class="form-control" id="trad">
 								</div>
 								<div class="opcb">
-									<button class="btn2 btn-action" type="submit" id="but">Calificar</button>
+									<button class="btn2 btn-action" type="submit" id="but" onclick="javascript:val();">Calificar</button>
 								</div>
 							</form>
 						</div>
@@ -155,12 +157,13 @@
 		</div>
 
 	</footer>	
-	<input type="text" id="siuu" value="<?php echo $_SESSION['Tema'];?>" hidden>
+	
 	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 	<script src="assets/js/headroom.min.js"></script>
 	<script src="assets/js/jQuery.headroom.min.js"></script>
 	<script src="assets/js/template.js"></script>
+	<script src="assets/js/jQueryEX2.js"></script>
 </body>
 </html>

@@ -1,10 +1,5 @@
-var tema = document.getElementById('siuu').value;
-console.log(tema);
-myForm.addEventListener("submit", (e) =>
-{
-    e.preventDefault();
-    val();
-});
+var tema = document.getElementById('siu').value;
+
 //Colocar datos en la pagina web
 valor="";
 res="";
@@ -62,7 +57,7 @@ function val()
     if(aux==false)
     {
         elem.style.background = 'blue';
-        document.querySelector('#pal').append("Respuesta Correcta");
+        document.querySelector('#pala').append("Respuesta Correcta");
         setTimeout(function(){
             location.reload();
         }, 3000);
@@ -70,7 +65,7 @@ function val()
     else
     {
         elem.style.background = 'red';
-        document.querySelector('#pal').append("Respuesta Incorrecta");
+        document.querySelector('#pala').append("Respuesta Incorrecta");
         setTimeout(function(){
             location.reload();
         }, 3000);
