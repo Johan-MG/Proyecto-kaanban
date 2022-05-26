@@ -1,4 +1,3 @@
-var tema = document.getElementById('tema');
 //4 números aleatorios sin repeticion
 numero1 =aleatorio();
 numero2 =0;
@@ -58,26 +57,34 @@ function val(opc)
     //validar opción correcta
     correcto=0;
     if(numero1==1)
-    {correcto=1;}else
+    {correcto=1;aux='id1';}else
     {
         if(numero2==1)
-        {correcto=2;}else
+        {correcto=2;aux='id2';}else
         {
             if(numero3==1)
-            {correcto=3;}else
+            {correcto=3;aux='id3';}else
             {
-                correcto=4;
+                correcto=4;aux='id4';
             }
         }
     }
+    elem = document.getElementById(aux);
     if (opc==correcto)
     {
-        alert("Respuesta Correcta");
-        reload()
+        elem.style.background = 'blue';
+        document.querySelector('#res').append("Respuesta Correcta");
+        setTimeout(function(){
+            location.reload();
+        }, 5000);
     }
     else
     {
-        alert("Respuesta Incorrecta");
+        elem.style.background = 'red';
+        document.querySelector('#res').append("Respuesta Incorrecta");
+        setTimeout(function(){
+            location.reload();
+        }, 5000);
     }
     //Comparar con opción seleccionada
     

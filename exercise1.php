@@ -24,7 +24,6 @@
 	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
-	<script src="assets/js/jQueryEX1.js"></script>
 
 	<!-- Custom styles for our template -->
 	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" >
@@ -49,7 +48,7 @@
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
 					<li><a href="index.html">Inicio</a></li>
-					<li><a href="mainmenu.html">Aprende vocabulario</a></li>
+					<li><a href="mainmenu.php">Aprende vocabulario</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $varUsuario ?><b class="caret"></b></a>
 						<ul class="dropdown-menu">
@@ -76,7 +75,7 @@
 
 		<ol class="breadcrumb">
 			<li><a href="index.html">Inicio</a></li>
-			<li><a href="mainmenu.html">Aprende vocabulario</a></li>
+			<li><a href="mainmenu.php">Aprende vocabulario</a></li>
 			<li class="active">Tema X</li>
 		</ol>
 
@@ -93,9 +92,10 @@
 						<div class="panel-body">
 							<h3 class="thin text-center">Selecciona la traducción correcta</h3>
 							<h2 class="thin text-center" id="pal"></h2>
+							<h2 class="thin text-center" id="res"></h2>
 						<hr>
 							
-							<form>
+							<form id="myForm">
 								<div class="opcb">
 									<button class="btn2 btn-action" type="submit" onclick="javascript:val(1);" id="id1"></button>
 								</div>
@@ -161,11 +161,13 @@
 
 	</footer>	
 
+	<input type="text" id="siu" value="<?php echo $_SESSION['Tema'];?>" hidden>
 	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 	<script src="assets/js/headroom.min.js"></script>
 	<script src="assets/js/jQuery.headroom.min.js"></script>
 	<script src="assets/js/template.js"></script>
+	<script src="assets/js/jQueryEX1.js"></script>
 </body>
 </html>

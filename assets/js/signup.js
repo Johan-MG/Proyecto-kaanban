@@ -8,7 +8,11 @@ const myForm = document.getElementById('myForm');
 const Tipo = 3;
 myForm.addEventListener("submit", (e) =>{
     e.preventDefault();
-    if (Contrasena != Contrasenab) {
+    console.log("entre");
+    console.log(document.getElementById('contrasena').value);
+    if (Contrasena.value != Contrasenab.value) {
+        console.log(document.getElementById('contrasena'));
+        console.log(Contrasenab.value);
         alert("Las contraseñas deben coincidir");
     } else {
         registro(); 
@@ -23,8 +27,8 @@ function registro(){
     }).done((data) => {
         switch($(data).find('Bandera').text()) {
             case '1':
-                alert("Registro exitoso. ¡Bienvenido!");
-                window.location.href = "mainmenu.html";
+                alert("¡Registro exitoso! Por favor inicie sesión.");
+                window.location.href = "singin.html";
             break;
             case '-1':
                 alert("El correo ya existe");
