@@ -51,9 +51,9 @@
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
 					<li><a href="index.html">Inicio</a></li>
-					<li><a href="mainmenu.html">Aprende Vocabulario</a></li>
+					<li><a href="mainmenu.php">Aprende Vocabulario</a></li>
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Nombre de admin<b class="caret"></b></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $varUsuario ?><b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li><a href="mod-usu.php">Administrar usuario</a></li>
 							<li><a href="mod-pal.php">Administrar palabras</a></li>

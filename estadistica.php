@@ -1,3 +1,15 @@
+<?php
+    session_start();
+    $varUsuario = $_SESSION['Usuario'];
+    $varRol = $_SESSION['Rol'];
+    $varCorreo = $_SESSION['Correo'];
+    if($varUsuario == null || $varUsuario == '' &&
+    $varRol == null || $varRol == ''){
+        echo 'No se ha loggeado';
+        die();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -38,8 +50,20 @@
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
 					<li><a href="index.html">Inicio</a></li>
-					<li><a href="contact.html">Sobre nosotros</a></li>
-					<li><a class="btn" href="signin.html">Iniciar Sesión</a></li>
+					<li class="active"><a href="mainmenu.php">Aprende vocabulario</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $varUsuario ?><b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="estadistica.php">Estadisticas</a></li>
+							<?php
+							if($varRol == 'ADMINISTRADOR'){
+							 	echo "<li><a href='mod-usu.php'>Administrar usuario</a></li>";
+								echo "<li><a href='mod-pal.php'>Administrar palabras</a></li>";
+							}
+							?>
+							<li><a href="assets/php/logout.php">Cerrar Sesión</a></li>
+						</ul>
+					</li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -80,12 +104,12 @@
                                         <!-- Estadísticas -->
                                         <div class="top-margin">
                                             <label for="nombre">Nombre:  </label>
-                                            <label for="nombre">Ejemplo de nombre  </label>
+                                            <label for="nombre"><?php echo $varUsuario ?></label>
                                         </div>
                                         
                                         <div class="top-margin">
                                             <label for="nombre">Correo:  </label>
-                                            <label for="nombre">Ejemplo de correo </label>
+                                            <label for="nombre"><?php echo $varCorreo?></label>
                                         </div>
                                     <!-- /Estadísticas -->
                                     </div>
@@ -104,7 +128,7 @@
                                                                     <div>
                                                                         <div class="percent">
                                                                             <div class="number">
-                                                                                <h2>0</h2>
+                                                                                <h2 id="intentos_global">0</h2>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -118,7 +142,7 @@
                                                                         <div class="percent">
                                                                             
                                                                             <div class="number">
-                                                                                <h2>0</h2>
+                                                                                <h2 id="correctas_global">0</h2>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -126,13 +150,13 @@
                                                                 <div class="text">Respuestas correctas</div>
                                                             </div><!-- /card -->
 
-                                                            <div class="card">
+                                                            <!-- <div class="card">
                                                                 <div class="box">
                                                                     <div>
                                                                         <div class="percent">
                                                                             <svg>
-                                                                                <circle cx="70" cy="70" r="70"></circle>
-                                                                                <circle cx="70" cy="70" r="70"></circle>
+                                                                                <circle cx="100" cy="100" r="100"></circle>
+                                                                                <circle cx="70" cy="70" r="0"></circle>
                                                                             </svg>
                                                                             <div class="number">
                                                                                 <h2>0</h2>
@@ -141,7 +165,7 @@
                                                                     </div>
                                                                 </div>
                                                                 <div class="text">Aprovechamiento</div>
-                                                            </div><!-- /card -->
+                                                            </div> --><!-- /card -->
 
                                                         </div><!-- termina cartas -->
                                                     </div>
@@ -160,7 +184,7 @@
                                                                 <div>
                                                                     <div class="percent">
                                                                         <div class="number">
-                                                                            <h2>0</h2>
+                                                                            <h2 id="computacion_intentos">0</h2>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -174,7 +198,7 @@
                                                                     <div class="percent">
                                                                         
                                                                         <div class="number">
-                                                                            <h2>0</h2>
+                                                                            <h2 id="computacion_aciertos">0</h2>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -182,7 +206,7 @@
                                                             <div class="text">Respuestas correctas</div>
                                                         </div><!-- /card -->
 
-                                                        <div class="card">
+                                                        <!-- <div class="card">
                                                             <div class="box">
                                                                 <div>
                                                                     <div class="percent">
@@ -197,7 +221,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="text">Aprovechamiento</div>
-                                                        </div><!-- /card -->
+                                                        </div> --><!-- /card -->
 
                                                     </div><!-- termina cartas -->
                                                 </div>
@@ -215,7 +239,7 @@
                                                             <div>
                                                                 <div class="percent">
                                                                     <div class="number">
-                                                                        <h2>0</h2>
+                                                                        <h2 id="botanica_intentos">0</h2>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -229,7 +253,7 @@
                                                                 <div class="percent">
                                                                     
                                                                     <div class="number">
-                                                                        <h2>0</h2>
+                                                                        <h2 id="botanica_aciertos">0</h2>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -237,7 +261,7 @@
                                                         <div class="text">Respuestas correctas</div>
                                                     </div><!-- /card -->
 
-                                                    <div class="card">
+                                                    <!-- div class="card">
                                                         <div class="box">
                                                             <div>
                                                                 <div class="percent">
@@ -252,7 +276,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="text">Aprovechamiento</div>
-                                                    </div><!-- /card -->
+                                                    </div> --><!-- /card -->
 
                                                 </div><!-- termina cartas -->
                                             </div>
@@ -270,7 +294,7 @@
                                                         <div>
                                                             <div class="percent">
                                                                 <div class="number">
-                                                                    <h2>0</h2>
+                                                                    <h2 id="astrologia_intentos">0</h2>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -284,7 +308,7 @@
                                                             <div class="percent">
                                                                 
                                                                 <div class="number">
-                                                                    <h2>0</h2>
+                                                                    <h2 id="astrologia_aciertos">0</h2>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -292,7 +316,7 @@
                                                     <div class="text">Respuestas correctas</div>
                                                 </div><!-- /card -->
 
-                                                <div class="card">
+                                                <!-- <div class="card">
                                                     <div class="box">
                                                         <div>
                                                             <div class="percent">
@@ -307,7 +331,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="text">Aprovechamiento</div>
-                                                </div><!-- /card -->
+                                                </div> --><!-- /card -->
 
                                             </div><!-- termina cartas -->
                                         </div>
@@ -326,7 +350,7 @@
                                                     <div>
                                                         <div class="percent">
                                                             <div class="number">
-                                                                <h2>0</h2>
+                                                                <h2 id="escuela_intentos">0</h2>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -340,7 +364,7 @@
                                                         <div class="percent">
                                                             
                                                             <div class="number">
-                                                                <h2>0</h2>
+                                                                <h2 id="escuela_aciertos">0</h2>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -348,7 +372,7 @@
                                                 <div class="text">Respuestas correctas</div>
                                             </div><!-- /card -->
 
-                                            <div class="card">
+                                            <!-- <div class="card">
                                                 <div class="box">
                                                     <div>
                                                         <div class="percent">
@@ -363,7 +387,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="text">Aprovechamiento</div>
-                                            </div><!-- /card -->
+                                            </div> --><!-- /card -->
 
                                         </div><!-- termina cartas -->
                                     </div>
@@ -382,7 +406,7 @@
                                                 <div>
                                                     <div class="percent">
                                                         <div class="number">
-                                                            <h2>0</h2>
+                                                            <h2 id="hogar_intentos">0</h2>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -396,7 +420,7 @@
                                                     <div class="percent">
                                                         
                                                         <div class="number">
-                                                            <h2>0</h2>
+                                                            <h2 id="hogar_aciertos">0</h2>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -404,7 +428,7 @@
                                             <div class="text">Respuestas correctas</div>
                                         </div><!-- /card -->
 
-                                        <div class="card">
+                                        <!-- <div class="card">
                                             <div class="box">
                                                 <div>
                                                     <div class="percent">
@@ -419,7 +443,7 @@
                                                 </div>
                                             </div>
                                             <div class="text">Aprovechamiento</div>
-                                        </div><!-- /card -->
+                                        </div> --><!-- /card -->
 
                                     </div><!-- termina cartas -->
                                 </div>
@@ -438,7 +462,7 @@
                                             <div>
                                                 <div class="percent">
                                                     <div class="number">
-                                                        <h2>0</h2>
+                                                        <h2 id="clima_intentos">0</h2>
                                                     </div>
                                                 </div>
                                             </div>
@@ -452,7 +476,7 @@
                                                 <div class="percent">
                                                     
                                                     <div class="number">
-                                                        <h2>0</h2>
+                                                        <h2 id="clima_aciertos">0</h2>
                                                     </div>
                                                 </div>
                                             </div>
@@ -460,7 +484,7 @@
                                         <div class="text">Respuestas correctas</div>
                                     </div><!-- /card -->
 
-                                    <div class="card">
+                                    <!-- <div class="card">
                                         <div class="box">
                                             <div>
                                                 <div class="percent">
@@ -475,7 +499,7 @@
                                             </div>
                                         </div>
                                         <div class="text">Aprovechamiento</div>
-                                    </div><!-- /card -->
+                                    </div> --><!-- /card -->
 
                                 </div><!-- termina cartas -->
                             </div>
@@ -548,13 +572,14 @@
 		</div>
 
 	</footer>	
-
+    <input type="text" id="Correo" value="<?php echo $_SESSION['Correo'];?>" hidden>
 	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 	<script src="assets/js/headroom.min.js"></script>
 	<script src="assets/js/jQuery.headroom.min.js"></script>
 	<script src="assets/js/template.js"></script>
+    <script src="assets/js/estadisticas.js"></script>
 	
 </body>
 </html>

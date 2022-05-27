@@ -52,7 +52,7 @@
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $varUsuario ?><b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href="sidebar-left.html">Estadisticas</a></li>
+							<li><a href="estadistica.php">Estadisticas</a></li>
 							<?php
 							if($varRol == 'ADMINISTRADOR'){
 							 	echo "<li><a href='mod-usu.php'>Administrar usuario</a></li>";
@@ -163,6 +163,7 @@
 	</footer>	
 
 	<input type="text" id="siu" value="<?php echo $_SESSION['Tema'];?>" hidden>
+	<input type="text" id="Correo" value="<?php echo $_SESSION['Correo'];?>" hidden>
 	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>

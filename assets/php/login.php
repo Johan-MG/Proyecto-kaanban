@@ -1,10 +1,11 @@
 <?php
     $usuario=$_POST['Usuario'];
-    //$Contrasena=$_POST['Contrasena'];
+    $correo=$_POST['Correo'];
     $Rol=$_POST['Rol'];
     session_start();
+
     $_SESSION['Usuario'] = $usuario;
-    //$_SESSION['Contrasena'] = $Contrasena;
+    $_SESSION['Correo'] = $correo;
     $_SESSION['Rol'] = $Rol;
     header('location:../../mainmenu.php');
 ?>

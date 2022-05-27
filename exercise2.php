@@ -36,6 +36,7 @@
 	<script src="assets/js/respond.min.js"></script>
 	<![endif]-->
 	<input type="text" id="siu" value="<?php echo $_SESSION['Tema'];?>" hidden>
+	<input type="text" id="Correo" value="<?php echo $_SESSION['Correo'];?>" hidden>
 </head>
 
 <body onload="javascript:cargardatos();">
@@ -54,7 +55,7 @@
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $varUsuario ?><b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href="sidebar-left.html">Estadisticas</a></li>
+							<li><a href="estadistica.php">Estadisticas</a></li>
 							<?php
 							if($varRol == 'ADMINISTRADOR'){
 							 	echo "<li><a href='mod-usu.php'>Administrar usuario</a></li>";

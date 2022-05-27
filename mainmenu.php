@@ -4,7 +4,7 @@
     $varRol = $_SESSION['Rol'];
     if($varUsuario == null || $varUsuario == '' &&
     $varRol == null || $varRol == ''){
-        echo 'No se ha loggeado'.$_SESSION['Usuario'].$_SESSION['Rol'];
+        echo 'No se ha loggeado';
         die();
     }
 ?>
@@ -47,11 +47,11 @@
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
 					<li><a href="index.html">Inicio</a></li>
-					<li class="active"><a href="mainmenu.html">Aprende vocabulario</a></li>
+					<li class="active"><a href="mainmenu.php">Aprende vocabulario</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $varUsuario ?><b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href="sidebar-left.html">Estadisticas</a></li>
+							<li><a href="estadistica.php">Estadisticas</a></li>
 							<?php
 							if($varRol == 'ADMINISTRADOR'){
 							 	echo "<li><a href='mod-usu.php'>Administrar usuario</a></li>";

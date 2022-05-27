@@ -53,7 +53,7 @@
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $varUsuario ?><b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href="sidebar-left.html">Estadisticas</a></li>
+							<li><a href="estadistica.php">Estadisticas</a></li>
 							<?php
 							if($varRol == 'ADMINISTRADOR'){
 							 	echo "<li><a href='mod-usu.php'>Administrar usuario</a></li>";

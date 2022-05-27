@@ -1,4 +1,5 @@
 var tema = document.getElementById('siu').value;
+var Correo = document.getElementById('Correo').value;
 myForm.addEventListener("submit", (e) =>
 {
     e.preventDefault();
@@ -79,6 +80,24 @@ function val(opc)
     {
         elem.style.background = 'blue';
         document.querySelector('#res').append("Respuesta Correcta");
+        try
+        {
+        $.ajax
+        ({
+            url: `https://kaanbal.azurewebsites.net/Conexion.asmx/Progreso?correo=${Correo}&tema=${tema}&respuesta=1`,
+            type: 'GET',
+            dataType: 'xml',        
+            success: function(msg) 
+            {
+                   console.log(msg);
+            },
+            error: function(jqXmlHttpRequest, textStatus, errorThrown) { alert("Error al guardar progreso."); }
+        });
+    } 
+    catch (err) 
+    {
+        alert(err);
+    }
         setTimeout(function(){
             location.reload();
         }, 3000);
@@ -87,6 +106,24 @@ function val(opc)
     {
         elem.style.background = 'red';
         document.querySelector('#res').append("Respuesta Incorrecta");
+        try
+    {
+        $.ajax
+        ({
+            url: `https://kaanbal.azurewebsites.net/Conexion.asmx/Progreso?correo=${Correo}&tema=${tema}&respuesta=0`,
+            type: 'GET',
+            dataType: 'xml',        
+            success: function(msg) 
+            {
+                console.log(msg);
+            },
+            error: function(jqXmlHttpRequest, textStatus, errorThrown) { alert("Error al guardar progreso."); }
+        });
+    } 
+    catch (err) 
+    {
+        alert(err);
+    }
         setTimeout(function(){
             location.reload();
         }, 3000);
