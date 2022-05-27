@@ -1,5 +1,8 @@
 var tema = document.getElementById('siu').value;
-
+myForm.addEventListener("submit", (e) =>
+{
+    e.preventDefault();
+});
 //Colocar datos en la pagina web
 valor="";
 res="";

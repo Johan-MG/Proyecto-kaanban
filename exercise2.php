@@ -119,44 +119,45 @@
 
 	<footer id="footer" class="top-space">
 
-		<div class="footer1">
-			<div class="container">
-				<div class="row">
-					
-					<div class="col-md-3 widget">
-						<h3 class="widget-title">Contacto</h3>
-						<div class="widget-body">diegarma@hotmail.com</a><br>
-								<br>
-								Felipe Angeles Km. 84.5, Venta Prieta, 42083 Pachuca de Soto, Hgo.
-							</p>	
-						</div>
-					</div>
-
-					<div class="col-md-3 widget">
-						<h3 class="widget-title">Siguenos</h3>
-						<div class="widget-body">
-							<p class="follow-me-icons">
-								<a href=""><i class="fa fa-twitter fa-2"></i></a>
-								<a href=""><i class="fa fa-dribbble fa-2"></i></a>
-								<a href=""><i class="fa fa-github fa-2"></i></a>
-								<a href=""><i class="fa fa-facebook fa-2"></i></a>
-							</p>	
-						</div>
-					</div>
-
-					<div class="col-md-6 widget">
-						<h3 class="widget-title">Terminos y condiciones</h3>
-						<div class="widget-body">
-							<p>"Este programa es público, ajeno a cualquier partido político. Queda prohibido el uso para fines distintos a los establecidos en el programa"</p>
-						</div>
-					</div>
-
-				</div> <!-- /row of widgets -->
+<div class="footer1">
+	<div class="container">
+		<div class="row">
+			
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Contacto</h3>
+				<div class="widget-body">diegarma@hotmail.com</a><br>
+				johanmg902@gmail.com</a><br>
+				ariadna.phdez@gmail.com</a><br>
+				brayanhdzlpz2000@gmail.com</a><br>
+				
+						<br>	
+				</div>
 			</div>
-		</div>
-		</div>
 
-	</footer>	
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Siguenos</h3>
+				<div class="widget-body">
+					<p class="follow-me-icons">
+						<a href="https://twitter.com/Brayanhl17"><i class="fa fa-twitter fa-2"></i></a>
+						<a href="https://github.com/DiegoCalva"><i class="fa fa-github fa-2"></i></a>
+						<a href="https://www.facebook.com/ariadna.perezhernandez"><i class="fa fa-facebook fa-2"></i></a>
+					</p>	
+				</div>
+			</div>
+
+			<div class="col-md-6 widget">
+				<h3 class="widget-title">Terminos y condiciones</h3>
+				<div class="widget-body">
+					<p>"Este programa es público, ajeno a cualquier partido político. Queda prohibido el uso para fines distintos a los establecidos en el programa"</p>
+				</div>
+			</div>
+
+		</div> <!-- /row of widgets -->
+	</div>
+</div>
+</div>
+
+</footer>	
 	
 	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
