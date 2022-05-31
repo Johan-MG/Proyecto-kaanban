@@ -89,6 +89,82 @@
 						<div class="panel-body">
 							<h3 class="thin text-center">Ingrese los datos correspondientes</h3>
 							<hr>
+							<script>
+var Id = document.getElementById('id');
+var Nombre = document.getElementById('nombre');
+var Correo = document.getElementById('correo');
+var Paterno = document.getElementById('paterno');
+var Materno = document.getElementById('materno');
+var Contrasena = document.getElementById('contrasena');
+const myForm = document.getElementById('myForm');
+const Tipo = 3;
+
+myForm.addEventListener("submit", (e) =>
+{
+    e.preventDefault();
+});
+
+function insertar(){
+    $.ajax({
+        type: 'GET',
+        url: `http://kaanbal.azurewebsites.net/Conexion.asmx/insUsuario?nombre=${Nombre.value}&contrasena=${Contrasena.value}&correo=${Correo.value}&ap_pat=${Paterno.value}&ap_mat=${Materno.value}&tip_id=${Tipo}`,
+        dataType: 'xml'
+    }).done((data) => {
+        switch($(data).find('Bandera').text()) {
+            case '1':
+                alert("¡Registro exitoso!");
+            break;
+            case '-1':
+                alert("El correo ya existe");
+            break;
+            default: 
+            alert("Inserción incorrecta, verifique los datos ingresados");
+        }
+        console.log($(data).find('Bandera').text());
+    }) 
+}
+
+function modificar(){
+    $.ajax({
+        type: 'GET',
+        url: `http://kaanbal.azurewebsites.net/Conexion.asmx/updUsuario?id=${Id.value}&nombre=${Nombre.value}&contrasena=${Contrasena.value}&correo=${Correo.value}&ap_pat=${Paterno.value}&ap_mat=${Materno.value}&tip_id=${Tipo}`,
+        dataType: 'xml'
+    }).done((data) => {
+        switch($(data).find('Bandera').text()) {
+            case '1':
+                alert("¡Modificación exitosa!");
+            break;
+            case '-1':
+                alert("El correo ya existe");
+            break;
+            default: 
+            alert("Modificación incorrecta, verifique los datos ingresados");
+        }
+        console.log($(data).find('Bandera').text());
+    }) 
+}
+
+function eliminar(){
+    $.ajax({
+        type: 'GET',
+        url: `http://kaanbal.azurewebsites.net/Conexion.asmx/DelUsuario?id=${Id.value}`,
+        dataType: 'xml'
+    }).done((data) => {
+        switch($(data).find('Bandera').text()) {
+            case '1':
+                alert("¡Eliminación exitosa!");
+            break;
+            case '-1':
+                alert("La clave no existe");
+            break;
+            default: 
+            alert("Eliminación incorrecta, verifique los datos ingresados");
+        }
+        console.log($(data).find('Bandera').text());
+    }) 
+}
+							</script>
+
 							<form id="myForm">
 								<div class="top-margin">
 									<label for="id">ID</label>
@@ -119,13 +195,13 @@
 								<hr>
 								<div class="row">
 									<div class="col-lg-4 text-right">
-										<button onclick="javascript:insertar()" class="btn btn-action" id="eliminar" type="submit">Eliminar</button>	
+										<button class="btn btn-action" id="eliminar" type="submit" onclick="javascript:eliminar();">Eliminar</button>	
 									</div>
 									<div class="col-lg-4 text-right">
-										<button onclick="javascript:modificar()" class="btn btn-action" id="modificar" type="submit">Modificar</button>	
+										<button class="btn btn-action" id="modificar" type="submit" onclick="javascript:modificar();">Modificar</button>	
 									</div>
 									<div class="col-lg-4 text-right">
-										<button onclick="javascript:insertar()" class="btn btn-action" id="registrar" type="submit">Registrar</button>	
+										<button class="btn btn-action" id="registrar" type="submit" onclick="javascript:insertar();" >Registrar</button>	
 									</div>
 								</div>
 							</form>
