@@ -4,11 +4,12 @@ var Correo = document.getElementById('correo');
 var Paterno = document.getElementById('paterno');
 var Materno = document.getElementById('materno');
 var Contrasena = document.getElementById('contrasena');
+const Tipo = 3;
 
-myForm.addEventListener("submit", (e) =>
+/* myForm.addEventListener("submit", (e) =>
 {
     e.preventDefault();
-});
+}); */
 
 function insertar(){
     $.ajax({
@@ -33,7 +34,8 @@ function insertar(){
 function modificar(){
     $.ajax({
         type: 'GET',
-        url: `http://kaanbal.azurewebsites.net/Conexion.asmx/updUsuario?id=${Id.value}&nombre=${Nombre.value}&contrasena=${Contrasena.value}&correo=${Correo.value}&ap_pat=${Paterno.value}&ap_mat=${Materno.value}&tip_id=${Tipo}`,
+        /* updUsuario?id=string&nombre=string&contrasena=string&correo=string&ap_pat=string&ap_mat=string&tipo=string */
+        url: `http://kaanbal.azurewebsites.net/Conexion.asmx/updUsuario?id=${Id.value}&nombre=${Nombre.value}&contrasena=${Contrasena.value}&correo=${Correo.value}&ap_pat=${Paterno.value}&ap_mat=${Materno.value}&tipo=${Tipo}`,
         dataType: 'xml'
     }).done((data) => {
         switch($(data).find('Bandera').text()) {

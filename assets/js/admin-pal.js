@@ -5,10 +5,10 @@ var Idioma = document.getElementById('idioma');
 var Tema = document.getElementById('tema');
 var Rareza = document.getElementById('rareza');
 
-myForm.addEventListener("submit", (e) =>
+/* myForm.addEventListener("submit", (e) =>
 {
     e.preventDefault();
-});
+}); */
 
 function insertar(){
     $.ajax({
@@ -59,7 +59,7 @@ function modificar(){
 function eliminar(){
     $.ajax({
         type: 'GET',
-        url: `http://kaanbal.azurewebsites.net/Conexion.asmx/DelPalabra?id=${Id}`,
+        url: `http://kaanbal.azurewebsites.net/Conexion.asmx/DelPalabra?id=${Id.value}`,
         dataType: 'xml'
     }).done((data) => {
         switch($(data).find('Bandera').text()) {
