@@ -91,41 +91,41 @@
 							<hr>
 							<form>
 								<div class="top-margin">
-									<label>ID</label>
-									<input type="text" class="form-control">
+									<label for="id">ID</label>
+									<input type="text" id="id" title="id" class="form-control">
 								</div>
 								<div class="top-margin">
-									<label>Nombre</label>
-									<input type="text" class="form-control">
+									<label for="nombre">Nombre</label>
+									<input type="text" id="nombre" title="nombre" class="form-control">
 								</div>
 								<div class="row top-margin">
 									<div class="col-sm-6">
-										<label>Apellido Paterno <span class="text-danger">*</span></label>
-										<input type="text" class="form-control">
+										<label for="paterno">Apellido Paterno </label>
+										<input type="text" id="paterno" title="paterno" class="form-control">
 									</div>
 									<div class="col-sm-6">
-										<label>Apellido Materno <span class="text-danger">*</span></label>
-										<input type="text" class="form-control">
+										<label for="materno">Apellido Materno </label>
+										<input type="text" id="materno" title="materno" class="form-control">
 									</div>
 								</div>
 								<div class="top-margin">
-									<label>Correo Electronico <span class="text-danger">*</span></label>
-									<input type="text" class="form-control">
+									<label for="correo">Correo Electrónico </label>
+									<input type="text" id="correo" title="correo" class="form-control">
 								</div>
 								<div class="top-margin">
-									<label>Contraseña <span class="text-danger">*</span></label>
-									<input type="text" class="form-control">
+									<label for="contrasena">Contraseña </label>
+									<input type="text" id="contrasena" title="contrasena" class="form-control">
 								</div>
 								<hr>
 								<div class="row">
 									<div class="col-lg-4 text-right">
-										<button class="btn btn-action" type="submit">Eliminar</button>	
+										<button onclick="insertar()" class="btn btn-action" id="eliminar" type="submit">Eliminar</button>	
 									</div>
 									<div class="col-lg-4 text-right">
-										<button class="btn btn-action" type="submit">Modificar</button>	
+										<button onclick="modificar()" class="btn btn-action" id="modificar" type="submit">Modificar</button>	
 									</div>
 									<div class="col-lg-4 text-right">
-										<button class="btn btn-action" type="submit">Registrar</button>	
+										<button onclick="insertar()" class="btn btn-action" id="registrar" type="submit">Registrar</button>	
 									</div>
 								</div>
 							</form>
@@ -156,7 +156,7 @@
 			</div>
 
 			<div class="col-md-3 widget">
-				<h3 class="widget-title">Siguenos</h3>
+				<h3 class="widget-title">Síguenos</h3>
 				<div class="widget-body">
 					<p class="follow-me-icons">
 						<a href="https://twitter.com/Brayanhl17"><i class="fa fa-twitter fa-2"></i></a>
@@ -187,5 +187,6 @@
 	<script src="assets/js/headroom.min.js"></script>
 	<script src="assets/js/jQuery.headroom.min.js"></script>
 	<script src="assets/js/template.js"></script>
+	<script src="assets/js/admin-usu.js"></script>
 </body>
 </html>

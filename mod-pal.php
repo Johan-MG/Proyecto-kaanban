@@ -91,39 +91,39 @@
 							<hr>
 							<form>
                                 <div class="top-margin">
-									<label>ID</label>
-									<input type="text" class="form-control">
+									<label for="id">ID</label>
+									<input type="text" id="id" class="form-control">
 								</div>
 								<div class="top-margin">
-									<label>Palabra</label>
-									<input type="text" class="form-control">
+									<label for="palabra">Palabra</label>
+									<input type="text" id="palabra" class="form-control">
 								</div>
                                 <div class="top-margin">
-									<label>Traducción</label>
-									<input type="text" class="form-control">
+									<label for="traduccion">Traducción</label>
+									<input type="text" id="traduccion" class="form-control">
 								</div>
                                 <div class="top-margin">
-									<label>Idioma</label>
-									<input type="text" class="form-control">
+									<label for="idioma">Idioma</label>
+									<input type="text" id="idioma" class="form-control">
 								</div>
 								<div class="top-margin">
-									<label>Tema <span class="text-danger">*</span></label>
-									<input type="text" class="form-control">
+									<label for="tema">Tema </label>
+									<input type="text" id="tema" class="form-control">
 								</div>
 								<div class="top-margin">
-									<label>Rareza <span class="text-danger">*</span></label>
-									<input type="text" class="form-control">
+									<label for="rareza">Rareza</label>
+									<input type="text" id="rareza" class="form-control">
 								</div>
 								<hr>
 								<div class="row">
 									<div class="col-lg-4 text-right">
-										<button class="btn btn-action" type="submit">Eliminar</button>	
+										<button onclick="insertar()" class="btn btn-action" id="eliminar" type="submit">Eliminar</button>	
 									</div>
 									<div class="col-lg-4 text-right">
-										<button class="btn btn-action" type="submit">Modificar</button>	
+										<button onclick="modificar()" class="btn btn-action" id="modificar" type="submit">Modificar</button>	
 									</div>
 									<div class="col-lg-4 text-right">
-										<button class="btn btn-action" type="submit">Registrar</button>	
+										<button onclick="insertar()" class="btn btn-action" id="registrar" type="submit">Registrar</button>	
 									</div>
 								</div>
 							</form>
@@ -185,5 +185,6 @@
 	<script src="assets/js/headroom.min.js"></script>
 	<script src="assets/js/jQuery.headroom.min.js"></script>
 	<script src="assets/js/template.js"></script>
+	<script src="assets/js/admin-pal.js"></script>
 </body>
 </html>
