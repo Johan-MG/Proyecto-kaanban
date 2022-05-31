@@ -5,6 +5,11 @@ var Idioma = document.getElementById('idioma');
 var Tema = document.getElementById('tema');
 var Rareza = document.getElementById('rareza');
 
+myForm.addEventListener("submit", (e) =>
+{
+    e.preventDefault();
+});
+
 function insertar(){
     $.ajax({
         type: 'GET',

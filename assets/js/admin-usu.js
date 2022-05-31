@@ -5,6 +5,11 @@ var Paterno = document.getElementById('paterno');
 var Materno = document.getElementById('materno');
 var Contrasena = document.getElementById('contrasena');
 
+myForm.addEventListener("submit", (e) =>
+{
+    e.preventDefault();
+});
+
 function insertar(){
     $.ajax({
         type: 'GET',
