@@ -89,7 +89,7 @@
 						<div class="panel-body">
 							<h3 class="thin text-center">Ingrese los datos correspondientes</h3>
 							<hr>
-							<form>
+							<form id="myForm">
 								<div class="top-margin">
 									<label for="id">ID</label>
 									<input type="text" id="id" title="id" class="form-control">
@@ -119,13 +119,13 @@
 								<hr>
 								<div class="row">
 									<div class="col-lg-4 text-right">
-										<button onclick="insertar()" class="btn btn-action" id="eliminar" type="submit">Eliminar</button>	
+										<button onclick="javascript:insertar()" class="btn btn-action" id="eliminar" type="submit">Eliminar</button>	
 									</div>
 									<div class="col-lg-4 text-right">
-										<button onclick="modificar()" class="btn btn-action" id="modificar" type="submit">Modificar</button>	
+										<button onclick="javascript:modificar()" class="btn btn-action" id="modificar" type="submit">Modificar</button>	
 									</div>
 									<div class="col-lg-4 text-right">
-										<button onclick="insertar()" class="btn btn-action" id="registrar" type="submit">Registrar</button>	
+										<button onclick="javascript:insertar()" class="btn btn-action" id="registrar" type="submit">Registrar</button>	
 									</div>
 								</div>
 							</form>
